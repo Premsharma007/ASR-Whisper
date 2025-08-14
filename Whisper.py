@@ -79,8 +79,8 @@ iface = gr.Interface(
         gr.Textbox(label="Transcribed Text", lines=10, interactive=False),
         gr.File(label="Download Transcription (.txt)")
     ],
-    title="Local Whisper ASR for Tamil (with some English)",
-    description=f"Upload a Tamil audio file (around 20 mins) to get its transcription using the Whisper '{MODEL_SIZE}' model.",
+    title="Tamil Factory's (ASR) Whisper Transcription Model 1.0",
+    description=f"Upload a Tamil audio file to get its transcription using the Whisper '{MODEL_SIZE}' model.",
     live=False,
     allow_flagging="auto", # Allows users to flag incorrect outputs
     theme=gr.themes.Soft()
@@ -91,4 +91,5 @@ if __name__ == "__main__":
     # Launch the interface
     # share=True creates a public link (useful for sharing demos, but it's temporary and not secure for sensitive data)
     # For local use, share=False is generally preferred.
+
     iface.launch(inbrowser=False, show_error=True) # Opens in browser automatically, shows detailed errors
