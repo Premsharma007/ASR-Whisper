@@ -80,7 +80,7 @@ iface = gr.Interface(
         gr.File(label="Download Transcription (.txt)")
     ],
     title="Spider『X』ASR Whisper Transcription Model - 1.0",
-    description=f"Upload a Tamil audio file to get its transcription using the Whisper '{MODEL_SIZE}' model.",
+    description=f"Upload audio file (around 20 mins) to get its precise Transcription.",
     live=False,
     allow_flagging="auto", # Allows users to flag incorrect outputs
     theme=gr.themes.Soft()
@@ -93,4 +93,5 @@ if __name__ == "__main__":
     # For local use, share=False is generally preferred.
 
     iface.launch(inbrowser=False, show_error=True) # Opens in browser automatically, shows detailed errors
+
 
