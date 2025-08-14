@@ -1,0 +1,51 @@
+{
+  "run": [
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "echo 'Install script started...'"
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "message": "python -m venv venv"
+      }
+    },
+    {
+      "method": "shell.run",
+      "params": {
+        "venv": "venv",
+        "message": "pip install -r requirements.txt"
+      }
+    },
+    {
+      "method": "notify",
+      "params": {
+        "message": "Installation complete! Click the 'Start' button to launch."
+      }
+    }
+  ],
+  "menu": [
+    {
+      "text": "Start",
+      "icon": "fa-solid fa-rocket",
+      "run": [
+        {
+          "method": "shell.start",
+          "params": {
+            "venv": "venv",
+            "path": ".",
+            "message": "python app.py"
+          }
+        },
+        {
+          "method": "browser",
+          "params": {
+            "url": "http://127.0.0.1:7860"
+          }
+        }
+      ]
+    }
+  ]
+}
