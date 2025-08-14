@@ -1,0 +1,10 @@
+torchaudio
+gradio
+torch
+transformers
+indictranstoolkit
+openai-whisper
+sentencepiece
+sacremoses
+nltk
+accelerate
