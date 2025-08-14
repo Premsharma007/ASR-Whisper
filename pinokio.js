@@ -2,7 +2,7 @@ const path = require('path')
 module.exports = {
   version: "3.7",
   title: "ASR Whisper",
-  description: "Run Whisper speech-to-text inside Pinokio",
+  description: "Run Whisper speech-to-text",
   icon: "icon.png",
   menu: async (kernel, info) => {
     let installed = info.exists("env")
@@ -98,3 +98,4 @@ module.exports = {
     }
   }
 }
+
